@@ -4,13 +4,13 @@ fn main(){
 }
 
 
-fn test(){
-  newtest();
-  println!("Nimai Called")
-}
+// fn test(){
+//   newtest();
+//   println!("Nimai Called")
+// }
 
 
-fn newtest(){
-  println!("New Test")
-}
+// fn newtest(){
+//   println!("New Test")
+// }
 
