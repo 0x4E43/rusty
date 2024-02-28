@@ -1,7 +1,11 @@
 use std::{cmp::Ordering, io};
+use rand::Rng;
+
 
 fn main() {
-    println!("Hello, world!");
+    //generate a random number between 0-100
+    let hard_coded_num = rand::thread_rng().gen_range(1..=100);
+    println!("Hello, world! {hard_coded_num}");
 
     let mut input = String::new();
     // take input
@@ -10,7 +14,6 @@ fn main() {
         .expect("hellos");
 
     let num: i32  =  input.trim().parse().expect("not a number");
-    let hard_coded_num = 45;
     match  num.cmp(&hard_coded_num){
         Ordering::Less => print_result("Number is less"),
         Ordering::Equal => print_result("Number is Equal"),
