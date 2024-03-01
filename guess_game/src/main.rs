@@ -3,8 +3,9 @@ use rand::Rng;
 
 
 fn main() {
-    
-    guess_function();
+    loop {
+        guess_function();
+    }
 
 }
 fn print_result(str: &str){
