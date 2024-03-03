@@ -5,13 +5,12 @@ use rand::Rng;
 fn main() {
     //generate a random number between 0-100
     let guess_num = rand::thread_rng().gen_range(1..=100);
-    println!("Hello, world! {guess_num}");
     guess_function(guess_num);
 
 
 }
-fn print_result(str: &str){
-    println!("{str}")
+fn print_result(str: &str, num :i32){
+    println!("{num} is {str}")
 }
 
 fn guess_function(guess_num :i32){
@@ -19,24 +18,30 @@ fn guess_function(guess_num :i32){
         
         let mut input = String::new();
         // take input
-        io::stdin()
-            .read_line(&mut input)
-            .expect("hellos");
+        match io::stdin()
+            .read_line(&mut input) {
+                Ok( input) => input,
+                Err(_) => {
+                    println!("something went wrong");
+                    continue
+                },
+            };
     
         let num: i32  =  match  input.trim().parse(){
             Ok(n) => n,
-            Err(_) => continue,
+            Err(_) => {
+                println!("Not a number");
+                continue},
         };
-        
+
         match  num.cmp(&guess_num){
-            Ordering::Less => print_result("Number is less"),
+            Ordering::Less => print_result("Less", guess_num),
             Ordering::Equal => {
-                print_result("You win!");
+                println!("Matched, You Won!");
                 break;
             },
-            Ordering::Greater => print_result("Number is More"),
+            Ordering::Greater => print_result("More", num),
         }
     }
 }
-
 
