@@ -18,11 +18,11 @@ fn main() {
     println!("Boolean : {b}");
 
     //tuples
-    let tup :(i32, i32, i32 ) = (10, 11, 12);
+    let tup :(i32, f32, &str ) = (10, 11.4, "12");
     // println!("Tuples: {tup}") //cant be done
     let (x, y, z )= tup;
     println!("X= {x} Y= {y} Z={z}")
 
 
-    
+
 }
