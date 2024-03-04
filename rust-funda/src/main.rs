@@ -22,4 +22,7 @@ fn main() {
     }//can be made inner using braces
     println!("VAR is : {var}");
 
+    // mutability
+    let space = "   ";
+    println!("{0}", space.len());
 }
