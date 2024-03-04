@@ -21,8 +21,10 @@ fn main() {
     let tup :(i32, f32, &str ) = (10, 11.4, "12");
     // println!("Tuples: {tup}") //cant be done
     let (x, y, z )= tup;
-    println!("X= {x} Y= {y} Z={z}")
+    println!("X= {x} Y= {y} Z={z}");
 
-
+    //Arrays
+    let arr = [10, 11, 12];
+    println!("{0}", arr[2]); //It also provides array out of bound
 
 }
