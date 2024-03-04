@@ -11,4 +11,15 @@ fn main() {
     println!("CONSTANAT: {HOURS_IN_SECOND}");
     println!("NOT CONSTANAT: {hour_in_second}");
 
+    //SHADOWING
+    let var = 10;
+    println!("var before : {var}");
+    let var = var + 5;
+    println!("var before scope : {var}");
+    {
+        let var = var + 10;
+        println!("Local scope var is {var}")
+    }//can be made inner using braces
+    println!("VAR is : {var}");
+
 }
