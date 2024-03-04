@@ -44,4 +44,28 @@ fn main() {
         count += 1;
     }
     println!("End count = {count}");
+
+
+
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+
+
+    let a = [1, 45, 555, 55, 786, 773];
+    println!("FOR LOOP");
+    for el in a{
+        println!("Element from a {el}")
+    }
+
+    println!("WHILE LOOP");
+    let mut index = 0;
+    while index < a.len(){
+        println!("Element from a {}", a[index]);
+        index = index+1;
+
+    }
+
+
 }
