@@ -17,7 +17,6 @@ fn print_result(str: &str, num :i32){
 
 fn guess_function(guess_num :i32){
     loop {
-        
         let mut input = String::new();
         
         // take input

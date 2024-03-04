@@ -1,6 +1,8 @@
 fn main(){
-  println!("Hello World");
-  test()
+  let mut x:i32=10;
+  let x= "sdfsadf";
+  println!("{x} Hello World");
+
 }
 
 
