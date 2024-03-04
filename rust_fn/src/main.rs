@@ -1,6 +1,21 @@
 fn main() {
     println!("Hello, world!");
+
+    let x = {
+        let y = 5;
+        y+100
+    };
+
+    println!("X is {x}");
+
+    let z = {let u = 6; u};
+    println!("Z : {z}");
     test_function();
+    println!("value from return_test() {}", return_test());
+}
+
+fn return_test() -> i32{
+    5 //default return if semicolon is not present
 }
 
 fn test_function(){
