@@ -16,7 +16,10 @@ fn main() {
 
 
     let s1 = String::from("hello");
-    let s2 = s1;    
+    let s2 = s1; 
+    let s3 = s2.clone();  //It can work on String, what about primitive type 
+    println!("S2- {}", s2);
+    println!("S3- {}", s3);
 
     println!("{}, world!", s2);
 }
