@@ -31,7 +31,7 @@ fn main() {
     test(&st);
     println!("After test {st}");
     test_print(&mut st); //as we are playing with refence scope will be there
-    println!("After change: {st}")
+    println!("After change: {st} Dangle: {}", dangle())
 }
 
 fn test(st : &str)-> &str{
@@ -43,4 +43,10 @@ fn test(st : &str)-> &str{
 fn test_print(st : &mut String){
     println!("ST: {}", st);
     st.push_str("Charan")
+}
+
+//dangling reference
+fn dangle() -> String{
+    let s = String::from("Hello Rust🦀");
+    s
 }
