@@ -22,5 +22,17 @@ fn main() {
     println!("S3- {}", s3);
 
     println!("{}, world!", s2);
+
+    let x = 5;
+    let y = x; // x is not dropped here, why?
+    println!("{} {}", x,y);
+
+    let mut st =  String::from("Nimai");
+    st = test(st);
+    println!("After test {st}");
 }
 
+fn test(st : String)-> String{
+    println!("String {}", st);
+    st //this will return st without return statement
+}
