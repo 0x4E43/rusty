@@ -30,9 +30,17 @@ fn main() {
     let mut st =  String::from("Nimai");
     st = test(st);
     println!("After test {st}");
+    test_print(&mut st); //as we are playing with refence scope will be there
+    println!("After change: {st}")
 }
 
 fn test(st : String)-> String{
     println!("String {}", st);
     st //this will return st without return statement
+}
+
+//test print function
+fn test_print(st : &mut String){
+    println!("ST: {}", st);
+    st.push_str("Charan")
 }
