@@ -28,13 +28,13 @@ fn main() {
     println!("{} {}", x,y);
 
     let mut st =  String::from("Nimai");
-    st = test(st);
+    test(&st);
     println!("After test {st}");
     test_print(&mut st); //as we are playing with refence scope will be there
     println!("After change: {st}")
 }
 
-fn test(st : String)-> String{
+fn test(st : &str)-> &str{
     println!("String {}", st);
     st //this will return st without return statement
 }
